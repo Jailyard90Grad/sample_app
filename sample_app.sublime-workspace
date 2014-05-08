@@ -1,0 +1,349 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"secure",
+				"secure_token"
+			],
+			[
+				"to",
+				"token"
+			],
+			[
+				"toen",
+				"token_file"
+			],
+			[
+				"id",
+				"idcompany"
+			],
+			[
+				"idc",
+				"idcompany"
+			],
+			[
+				"idp",
+				"idproduction"
+			],
+			[
+				"tb",
+				"tblawardsregistrationfee"
+			],
+			[
+				"tblawards",
+				"tblawardsproduction"
+			],
+			[
+				"firstName",
+				"FirstName"
+			],
+			[
+				"fl",
+				"fldtitle"
+			],
+			[
+				"tbl",
+				"tblproduction"
+			],
+			[
+				"tblaward",
+				"tblawardsticketing"
+			],
+			[
+				"JI",
+				"join"
+			],
+			[
+				"tblawa",
+				"tblawardsproduction"
+			],
+			[
+				"tblproduc",
+				"tblproductionartists"
+			],
+			[
+				"tblpro",
+				"tblproduction"
+			],
+			[
+				"fld",
+				"fldemail"
+			],
+			[
+				"fldr",
+				"fldfirstname"
+			],
+			[
+				"in",
+				"individual"
+			],
+			[
+				"i",
+				"iduser"
+			],
+			[
+				"Join",
+				"JOIN"
+			],
+			[
+				"I",
+				"INNER"
+			],
+			[
+				"is",
+				"idartisttype"
+			],
+			[
+				"ida",
+				"idartisttype"
+			],
+			[
+				"From",
+				"FROM"
+			],
+			[
+				"LA",
+				"LastName"
+			],
+			[
+				"F",
+				"FirstName"
+			],
+			[
+				"iduser",
+				"iduser"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Ruby/Ruby.sublime-build",
+	"command_palette":
+	{
+		"height": 287.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Discover Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"install Package Control: Install Package",
+			"install"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/markdoerr/rails_projects/sample_app/Gemfile",
+		"/Users/markdoerr/rails_projects/sample_app/config/initializers/secret_token.rb",
+		"/Users/markdoerr/rails_projects/sample_app/.gitignore",
+		"/Users/markdoerr/rails_projects/sample_app/README.rdoc",
+		"/Users/markdoerr/rails_projects/demo_app/app/models/micropost.rb",
+		"/Users/markdoerr/rails_projects/demo_app/app/models/user.rb",
+		"/Users/markdoerr/rails_projects/demo_app/Gemfile",
+		"/Users/markdoerr/rails_projects/first_app/Gemfile",
+		"/Users/markdoerr/Dropbox (LA Stage Alliance)/LA STAGE ALLIANCE/Queries/2014 2-14 Platform Tabulation Queries.sql",
+		"/Users/markdoerr/Dropbox (LA Stage Alliance)/LA STAGE ALLIANCE/Queries/2014-01-14 Tabulation Queries.sql",
+		"/Users/markdoerr/Dropbox (LA Stage Alliance)/LA STAGE ALLIANCE/Queries/Mark's Queries.sql",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Queries/2014 02-13 Award Recommendation queries.sql",
+		"/Users/markdoerr/Dropbox (LA Stage Alliance)/LA STAGE ALLIANCE/Queries/2014 Mark's Testing Queries.sql",
+		"/Users/markdoerr/Dropbox (LA Stage Alliance)/LA STAGE ALLIANCE/Queries/2014 TBA voting reports.sql",
+		"/Users/markdoerr/Dropbox (LA Stage Alliance)/LA STAGE ALLIANCE/Awards Platform/2014/TBA/voter import files/2014-05-07 TBA adjudicator import file.csv",
+		"/Users/markdoerr/rails_projects/first_app/README.md",
+		"/Users/markdoerr/~subl",
+		"/Users/markdoerr/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/markdoerr/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/markdoerr/Downloads/FNOT 2.sql",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Queries/2014 Mark's Testing Queries.sql",
+		"/Users/markdoerr/Dropbox (LA Stage Alliance)/LA STAGE ALLIANCE/Awards Platform/2014/TBA/2014 04-24 TBA new adjudicator import list 2.csv",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Queries/2014 2-14 Platform Tabulation Queries.sql",
+		"/Users/markdoerr/Dropbox (LA Stage Alliance)/LA STAGE ALLIANCE/Awards Platform/2014/TBA/2014 04-24 TBA new adjudicator import list.csv",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Queries/Mark's Queries.sql",
+		"/Users/markdoerr/Dropbox (LA Stage Alliance)/LA STAGE ALLIANCE/Awards Platform/2014/LA STAGE/2014 04-16 LASA Ovations-login.css",
+		"/Users/markdoerr/Sites/lasa/Fnot/ViewScripts/tix-email-generate.phtml",
+		"/Users/markdoerr/Sites/lasa/Fnot/Model/TicketSales.php",
+		"/Users/markdoerr/Sites/lasa/Fnot/ViewScripts/reset-password.phtml",
+		"/Users/markdoerr/Sites/lasa/Fnot/ViewScripts/automated-emails-list.phtml",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Ovation Awards/Ovations 2014/Voting Reports/2014-03-25OVoterCampaignImportFile.csv",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Queries/2013 Mark's ASP queries",
+		"/Users/markdoerr/Downloads/ratchet-2.0.1/README.md",
+		"/Users/markdoerr/Downloads/2014-03-18.html",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Awards Platform/2014/TBA/2014 03-20 TBA adjudicator data import.csv",
+		"/Users/markdoerr/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/markdoerr/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/markdoerr/Desktop/test-cc.html",
+		"/Users/markdoerr/Sites/lasa/Fnot/View/VoterTools.php",
+		"/Users/markdoerr/Sites/lasa/Fnot/Controller/VoterTools.php",
+		"/Users/markdoerr/Sites/lasa/Fnot/ViewScripts/voter-tools.phtml",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Queries/2014-01-14 Tabulation Queries.sql",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Queries/Trena's Query.sql",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Awards Platform/2014/TBA/2014 2-6 TBA Awards.css",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Awards Platform/2014/LA STAGE/2014 2-6 LASA Ovations.css",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Queries/List of Ovation Registration fee orders.sql",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Awards Platform/2014/TBA/2014 2-13 TBA Adjudicator import file2.csv",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Awards Platform/2014/TBA/2014 2-13 TBA Adjudicator import file.csv",
+		"/Users/markdoerr/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/markdoerr/Dropbox/LA STAGE ALLIANCE/Queries/Doug's Other Queries.sql",
+		"/Users/markdoerr/Sites/lasa/Fnot/ViewScripts/awards-registration.phtml",
+		"/Users/markdoerr/Sites/lasa/Fnot/Controller/ManageAwards.php",
+		"/Users/markdoerr/Sites/lasa/Fnot/Controller/ManageProductions.php",
+		"/Users/markdoerr/Sites/lasa/Fnot/Controller/ManageVoters.php",
+		"/Users/markdoerr/Sites/lasa/Fnot/Controller/ManageRegions.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"annotation",
+			"annot",
+			"fancy",
+			".8em",
+			"annot",
+			"tblmember",
+			"tbluser",
+			"tblmember",
+			","
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"tbluser",
+			"tblmember",
+			"....\n",
+			";"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "sample_app.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

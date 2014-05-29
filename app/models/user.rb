@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :microposts, dependent: :destroy
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
 	validates :name, presence: true, length: { maximum: 50 }
@@ -6,9 +7,10 @@ class User < ActiveRecord::Base
 	validates :email, 	presence: true, 
 						format: { with: VALID_EMAIL_REGEX }, 
 						uniqueness: { case_sensitive: false }
+	validates :password, length: { minimum: 6 }
+
 	has_secure_password
-	before_save { email.downcase! }
-		validates :password, length: { minimum: 6 }
+	# before_save { email.downcase! }
 	
 	def User.new_remember_token
 		SecureRandom.urlsafe_base64
@@ -16,6 +18,11 @@ class User < ActiveRecord::Base
 
 	def User.digest(token)
 		Digest::SHA1.hexdigest(token.to_s)
+	end
+
+	def feed
+		# This is preliminary. See "following users" for the full implementation.
+		Micropost.where("user_id = ?", id)
 	end
 
 	private

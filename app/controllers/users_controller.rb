@@ -4,27 +4,27 @@ class UsersController < ApplicationController
   before_action :admin_user,      only: :destroy
   
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.paginate(page: params[:page]) #, per_page: 5) # defauts to 30/page
   end
 
   def show
   	@user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def new
-  	@user = User.new
+  if signed_in?
+      redirect_to root_url
+      flash[:notify] = "You already have an account"
+    else
+      @user = User.new
+    end
   end
 
-  # define create code I'm trying to write for Ex 8.5.1
-  #   @user = User.new(params[:user])
-  #   if @user.save
-  #     redirect_to @user, notice: "Signed up!"
-  #   else 
-  #    render 'new'
-  #   end
-  # end
-
   def create
+    if signed_in?
+      redirect_to root_url
+    else
   	@user = User.new(user_params)
   	if @user.save
   		sign_in @user
@@ -33,6 +33,7 @@ class UsersController < ApplicationController
   	else
   		render 'new'
   	end
+    end
   end
 
   def edit
@@ -48,9 +49,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = "User deleted."
-    redirect_to users_url
+      user = User.find(params[:id])
+      unless current_user?(user)
+        user.destroy
+        flash[:success] = "User deleted."
+      else
+        flash[:success] = "You can't delete yourself."
+      end
+      redirect_to users_url
   end
 
   private
@@ -60,13 +66,6 @@ class UsersController < ApplicationController
   	end
 
     # Before filters
-
-    def signed_in_user
-      unless signed_in?
-        store_location
-        redirect_to signin_url, notice: "Please sign in."
-      end
-    end
 
     def correct_user
       @user = User.find(params[:id])

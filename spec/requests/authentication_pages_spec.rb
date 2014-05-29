@@ -9,6 +9,12 @@ describe "Authentication" do
 
     it { should have_content('Sign in') }
     it { should have_title('Sign in') }
+
+    it { should_not have_link('Users') }      
+    it { should_not have_link('Profile') }
+    it { should_not have_link('Settings') }
+    it { should_not have_link('Sign out',   href: signout_path) }
+    it { should have_link('Sign in',  href: signin_path) }
   end
 
   describe "signin" do
@@ -41,6 +47,20 @@ describe "Authentication" do
   			before { click_link "Sign out" }
   			it { should have_link('Sign in') }
   		end
+
+      # #Exercise 9.6-6 - from Stack Overflow --
+      # describe "accessing new and create actions" do
+      #   describe "through website" do
+      #     before{visit signup_path}
+      #     it{ should_not have_selector('h1',text:"Sign up")} 
+      #     it{ should_not have_button("Create my account")} 
+      #    end
+      #    describe "through a POST request" do
+      #     before { post users_path}
+      #     specify { response.should redirect_to(root_path)}
+      #    end
+      #   end
+
   	end
   end
 
@@ -49,18 +69,42 @@ describe "Authentication" do
     describe "for non-signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
 
-      describe "when attempting to visit a protected page" do
+      describe "when visiting a non-protected page" do
+        before { visit user_path(user) }
+
+        it { should have_link('Sign in',  href: signin_path) }
+        it { should_not have_link('Users') }      
+        it { should_not have_link('Profile') }
+        it { should_not have_link('Settings') }
+        it { should_not have_link('Sign out') }
+      end
+
+      describe "when attempting to visit a protected page" do 
         before do
           visit edit_user_path(user)
           fill_in "Email",    with: user.email
           fill_in "Password", with: user.password
           click_button "Sign in"
-        end
+        end 
 
         describe "after signing in" do
 
-          it "should render the desired protectd page" do
+          it "should render the desired protected page" do
             expect(page).to have_title('Edit user')
+          end
+
+          describe "when signing in again" do
+            before do
+              click_link "Sign out"
+              visit signin_path
+              fill_in "Email",    with: user.email
+              fill_in "Password", with: user.password
+              click_button "Sign in"
+            end
+
+            it "should render the default (profile) page" do
+              expect(page).to have_title(user.name)
+            end
           end
         end
       end
@@ -80,6 +124,19 @@ describe "Authentication" do
         describe "visiting the user index" do
           before { visit users_path }
           it {should have_title('Sign in') }
+        end
+      end
+
+      describe "in the Microposts controller" do
+
+        describe "submitting to the create action" do
+          before { post microposts_path }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+
+        describe "submitting to the destory action" do
+          before { delete micropost_path(FactoryGirl.create(:micropost)) }
+          specify { expect(response).to redirect_to(signin_path) }
         end
       end
     end
@@ -103,7 +160,7 @@ describe "Authentication" do
 
     describe "as non-admin user" do
       let(:user) { FactoryGirl.create(:user) }
-      let(:non_admin) {FactoryGirl.create(:user) }
+      let(:non_admin) { FactoryGirl.create(:user) }
 
       before { sign_in non_admin, no_capybara: true }
 
@@ -112,5 +169,15 @@ describe "Authentication" do
         specify { expect(response).to redirect_to(root_url) }
       end
     end
+
+    describe "as admin user" do
+      let(:admin) { FactoryGirl.create(:admin) }
+      before { sign_in admin }
+
+      describe "should not be able to delete himself by submitting a DELETE request to the User#destroy action"
+        specify do
+          expect { delete user_path(admin) }.not_to change(User, :count).by(-1)
+        end
+      end
   end
 end
